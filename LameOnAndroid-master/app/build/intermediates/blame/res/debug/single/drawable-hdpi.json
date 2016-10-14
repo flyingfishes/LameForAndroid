@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\mybill_edit_normal.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\mybill_edit_normal.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_favorite.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\ic_favorite.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\drawer.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\drawer.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\cb_unchecked.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\cb_unchecked.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\cb_checked.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\cb_checked.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\file.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\file.png"
+    },
+    {
+        "merged": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\back.png",
+        "source": "E:\\Hi3798\\LameOnAndroid-master\\app\\src\\main\\res\\drawable-hdpi\\back.png"
+    }
+]

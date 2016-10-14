@@ -1,0 +1,140 @@
+[
+    {
+        "outputFile": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 60,
+                    "endOffset": 111
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 60,
+                        "endOffset": 111
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 116,
+                    "endColumn": 63,
+                    "endOffset": 175
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 116,
+                        "endColumn": 63,
+                        "endOffset": 175
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 180,
+                    "endColumn": 61,
+                    "endOffset": 237
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 180,
+                        "endColumn": 61,
+                        "endOffset": 237
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 242,
+                    "endColumn": 52,
+                    "endOffset": 290
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 242,
+                        "endColumn": 52,
+                        "endOffset": 290
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 295,
+                    "endColumn": 46,
+                    "endOffset": 337
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 46,
+                        "endOffset": 337
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 342,
+                    "endColumn": 45,
+                    "endOffset": 383
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 342,
+                        "endColumn": 45,
+                        "endOffset": 383
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 388,
+                    "endColumn": 46,
+                    "endOffset": 430
+                },
+                "from": {
+                    "file": "E:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.8\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 388,
+                        "endColumn": 46,
+                        "endOffset": 430
+                    }
+                }
+            }
+        ]
+    }
+]

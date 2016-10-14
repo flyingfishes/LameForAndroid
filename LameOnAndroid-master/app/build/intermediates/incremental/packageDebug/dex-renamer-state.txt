@@ -1,0 +1,4 @@
+#Fri Oct 14 09:57:10 CST 2016
+base.0=E\:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=E\:\\Hi3798\\LameOnAndroid-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
