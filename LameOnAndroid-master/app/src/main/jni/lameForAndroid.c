@@ -70,7 +70,6 @@ JNIEXPORT void JNICALL Java_com_example_lameonandroid_activity_SongList_convert
         read = fread(wav_buffer,sizeof(short int)*2,WAV_SIZE,fwav);
         if(read != 0){
         total += read* sizeof(short int)*2;
-        LOGE("111 have converted %d , read2=%d\n ",total,read);
         publishJavaProgress(env, obj, total);
         //第三个参数表示:每个通道取的数据长度
         write = lame_encode_buffer_interleaved(gfp,wav_buffer,WAV_SIZE,mp3_buffer,MP3_SIZE);
@@ -86,7 +85,7 @@ JNIEXPORT void JNICALL Java_com_example_lameonandroid_activity_SongList_convert
     lame_close(gfp);
     fclose(fwav);
     fclose(fmp3);
-    LOGE("convert completed...");
+    LOGE("convert completed");
     }
 
 }
