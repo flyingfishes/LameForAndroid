@@ -30,8 +30,14 @@ import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import static com.example.lameonandroid.R.drawable.file;
 
 /**
  *
@@ -39,7 +45,7 @@ import java.util.List;
  * @author pdm
  */
 @SuppressLint("ShowToast")
-public class SongList extends AppCompatActivity implements View.OnClickListener {
+public class SongList extends BaseActivity implements View.OnClickListener {
     private RecyclerView recyclerView;
     private List<SdFile> data;
     private LinearLayout ll_edit;
@@ -128,7 +134,7 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
 //            @Override
 //            public void onRefresh() {
 //                data.clear();
-//                initData(Constants.ROOT);
+//                sortData(Constants.ROOT);
 //                adapter.notifyDataSetChanged();
 //                recyclerView.refreshComplete();
 //            }
@@ -141,7 +147,16 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
         // 适配器
         // 获取数据
         String path = Constants.INSIDEROOT;
-        initData(Constants.DEFULTROOT);
+        Log.e("hhhhhhhhhhhhhh",Constants.DEFULTROOT);
+        sortData(Constants.DEFULTROOT);
+        //如果没有WAV文件，则从资源文件中获取
+        if (data.size() == 0){
+            handle.post(run);
+        }else {
+//            for (SdFile file : data){
+//                new File(file.getFilePath()).delete();
+//            }
+        }
         adapter = new RecycleFileAdapter(data);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new RecycleFileAdapter.OnItemClickListener() {
@@ -159,6 +174,10 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
 
             }
         });
+        File file = new File(Constants.DEFULTROOT + "ccc.wav");
+        if (file.exists()){
+            Log.e("hahahhahhahahah","存在");
+        }
     }
 
     @Override
@@ -177,7 +196,10 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
                 break;
         }
     }
-
+    private void sortData(String path){
+        initData(path);
+        Collections.sort(data);
+    }
     /**
      * @param path 当前列表的目录
      * @author
@@ -283,7 +305,36 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
             handle.sendMessage(msg);
         }
     }
-
+    private Runnable run = new Runnable() {
+        @Override
+        public void run() {
+            try {
+                //得到资源文件中所有的Wav歌曲
+                String[] files = getAssets().list("");
+                for (String fileName : files) {
+                    //找到所有以.orm.xml结尾的文件
+                    if (fileName.endsWith(".wav")) {
+                        File file = new File(Constants.DEFULTROOT + "/" + fileName);
+                        InputStream in = getAssets().open(fileName);
+                        FileOutputStream out = new FileOutputStream(file);
+                        byte[] buf = new byte[1024];
+                        int length = 0;
+                        while ((length = in.read(buf)) > -1) {
+                            out.write(buf, 0, length);
+                        }
+                        in.close();
+                        out.flush();
+                        out.close();
+                    }
+                }
+                Message msg = new Message();
+                msg.what = 2;
+                handle.sendMessage(msg);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    };
     public Handler handle = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -300,9 +351,14 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
                         Log.e("Time = ", msg.arg1 + "秒");
                         //先清除集合
                         data.clear();
-                        initData(Constants.ROOT);
+                        sortData(Constants.ROOT);
                         adapter.notifyDataSetChanged();
                         break;
+                    case 2:
+                        sortData(Constants.DEFULTROOT);
+                        if (adapter != null){
+                            adapter.notifyDataSetChanged();
+                        }
                     default:
                         break;
                 }
@@ -327,7 +383,7 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
                                             String path = data.get(i).getFilePath();
                                             if (path != null) {
                                                 //这里是彻底删除文件，为了测试，我屏蔽了
-//                                                new File(data.get(i).getFilePath()).delete();
+                                                new File(data.get(i).getFilePath()).delete();
                                             }
                                             adapter.remove(i);
                                             i = i - 1;
@@ -342,7 +398,7 @@ public class SongList extends AppCompatActivity implements View.OnClickListener 
                             @Override
                             public void onClick(DialogInterface dialog,
                                                 int which) {
-                                finish();
+                                dialog.dismiss();
 
                             }
                         }).show();
